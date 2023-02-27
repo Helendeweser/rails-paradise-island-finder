@@ -1,0 +1,9 @@
+<h1>Hello this is the index</h1>
+
+<p>Here are all islands</p>
+<% @islands.each do |island| %>
+  <%= island.name %>
+  <%= island.size %>
+  <%= island.price %>
+  <%= island.location %>
+<% end %>
