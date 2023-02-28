@@ -15,8 +15,15 @@ gem "pg", "~> 1.1"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+
+# To be able to add some faker for the seed (not use yet) [https://github.com/faker-ruby/faker]
 gem 'faker'
+
+# For the log-in log-out
 gem "devise"
+
+# To be able to attache image from cloudinary
+gem "cloudinary"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
