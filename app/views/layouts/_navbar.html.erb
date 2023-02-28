@@ -1,0 +1,37 @@
+  <nav class="navbar sticky-top">
+
+      <div class="d-flex left-button">
+      <%= link_to root_path do %>
+        <button class="btn" type="button"><i class="fa-solid fa-umbrella-beach"></i></button>
+        <% end %>
+        <div class="container h-100">
+          <div class="h-100">
+            <div class="searchbar">
+              <input class="search_input" type="text" name="" placeholder="Enter your paradisiac destination here !">
+              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="main-title">Paradise Island Finder</h1>
+
+      <div class="nav-item dropdown">
+      <% if user_signed_in? then %><%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      <% end %>
+        <div class="avatar dropdown-toggle btn" id="navbarDropdown" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            <% else %>
+              <a class="dropdown-item" href="#">Log In</a>
+              <a class="dropdown-item" href="#">Sign In</a>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+
+    </nav>

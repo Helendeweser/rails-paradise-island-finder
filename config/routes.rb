@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'islands/new', to: 'islands#new'
   get 'islands/:id', to: 'islands#show', as: 'island'
+
   patch 'islands/:id', to: 'islands#update'
   post 'islands', to: 'islands#create'
   get 'islands/:id/edit', to: 'islands#edit'
