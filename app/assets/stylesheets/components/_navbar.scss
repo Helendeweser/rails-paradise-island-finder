@@ -1,12 +1,125 @@
-.navbar-lewagon {
-  justify-content: space-between;
+.navbar {
+  background-color: white;
+  top: 0;
+}
+
+.btn {
+  background-color: #353b48;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  height: 60px;
+  width: 60px;
+}
+
+#main-title {
+  color: #353b48;
+  position: absolute;
+  left: 40%;
+}
+
+
+.searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+  .search_input{
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_input{
+  padding: 0 10px;
+  width: 450px;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_icon{
   background: white;
-}
+  color: #5c5c5c;
+  text-align: center;
+  }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+  .search_icon{
+  height: 40px;
   width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:white;
+  text-decoration:none;
+  }
+
+
+
+/* CSS POUR SHOW CARD INFORMATION*/
+.island-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 500px;
+  width: 80%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  position: center;
+}
+
+.card-trip h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #353b48;
+}
+
+.card-trip p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-trip ul {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+}
+
+.card-trip-pricing {
+  background-color: #353b48;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 20px;
+  font-weight: bold;
 }
