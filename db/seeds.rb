@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require "open-uri"
+
 Island.destroy_all
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592969/atlantis-boble_f9qfzt.jpg")
 
 island = Island.new(
   name: "shutter",
@@ -14,8 +19,13 @@ island = Island.new(
   size: 975,
   price: 10_764
 )
+island.photo.attach(io: image, filename: "atlantis", content_type: "image/png")
 island.save
 puts "Creating island #{island.id}"
+
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592893/white_20island.jpg_cysxjp.jpg")
 
 island = Island.new(
   name: "Banana Haven",
@@ -23,8 +33,13 @@ island = Island.new(
   size: 1005,
   price: 16_764
 )
+island.photo.attach(io: image, filename: "volcan", content_type: "image/png")
 island.save
 puts "Creating island #{island.id}"
+
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592868/5fac411930afb_oz4kkf.jpg")
 
 island = Island.new(
   name: "Sweetfish Retreat",
@@ -33,7 +48,12 @@ island = Island.new(
   price: 4964
 )
 island.save
+island.photo.attach(io: image, filename: "bahamas", content_type: "image/png")
 puts "Creating island #{island.id}"
+
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592820/baron_island_025_w5yepd.jpg")
 
 island = Island.new(
   name: "Ilan",
@@ -42,7 +62,12 @@ island = Island.new(
   price: 19_646
 )
 island.save
+island.photo.attach(io: image, filename: "barond island", content_type: "image/png")
 puts "Creating island #{island.id}"
+
+
+
+image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592791/th_ifxd9a.jpg")
 
 island = Island.new(
   name: "Goat",
@@ -51,7 +76,13 @@ island = Island.new(
   price: 12_646
 )
 island.save
+island.photo.attach(io: image, filename: "maldives", content_type: "image/png")
 puts "Creating island #{island.id}"
+
+
+
+
+image = URI.open("https://wallpapercave.com/wp/wp5166915.jpg")
 
 island = Island.new(
   name: "Pedro's",
@@ -60,4 +91,5 @@ island = Island.new(
   price: 1046
 )
 island.save
+island.photo.attach(io: image, filename: "small island", content_type: "image/png")
 puts "Creating island #{island.id}"
