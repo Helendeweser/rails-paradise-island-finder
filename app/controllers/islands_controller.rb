@@ -43,6 +43,6 @@ before_action :set_island, only: [:show]
   end
 
   def island_params
-    params.require(:island).permit(:name, :size, :description, :price)
+    params.require(:island).permit(:name, :size, :description, :price, :photo)
   end
 end
