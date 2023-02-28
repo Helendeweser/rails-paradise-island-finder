@@ -1,14 +1,35 @@
 <div class="container">
   <h1>Here are more details on the island</h1>
 
-  <p><%= @island.name %></p>
-  <p><%= @island.price %></p>
-  <p><%= @island.size %></p>
-
-
   <p><a class="btn btn-success" href="#">Book now</a></p>
 </div>
 
 <div class="comments_cards">
-  
+
+</div>
+
+<div class="container">
+  <div class="island-card">
+      <img src="https://assets-hp.hotelplan.com/image/BmjhbrPmB2mhBh_o1Lt25Cmjy8zP2FGwyFVyXahuIGU/rs:fill:670:445/g:fp:0.5:0.5/aHR0cHM6Ly9hc3NldHMuaG90ZWxwbGFuLmNvbS9teWFzc2V0cy93ZWJpbWFnZXMvNzAyLzcwMjM1NC5qcGc">
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <h2 style="line-height:3.5em;"><strong><%= @island.name %></strong></h2>
+          <p><%= @island.description %></p>
+          <div>
+            <p style="line-height:3.5em;">Caracteristics :</p>
+              <p><ul>
+                <li>Name: Zama Caye</li>
+                <li>Region: Belize , Central America</li>
+                <li>Location: 15 minutes boat ride from Placencia Village point</li>
+                <li>Type: Private Island</li>
+                <li>Size: <%= @island.size %> Acres</li>
+                <li>Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
+            </ul></p>
+          </div>
+        </div>
+        <div class="card-trip-pricing">Price: <%= @island.price %>€/night</div>
+      </div>
+    </div>
+  </div>
 </div>
