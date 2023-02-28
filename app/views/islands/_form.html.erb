@@ -1,1 +1,6 @@
-<h1>Here should come a form</h1>
+<%= simple_form_for @island do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>

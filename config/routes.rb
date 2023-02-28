@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get 'islands/new', to: 'islands#new'
-  get 'islands/:id', to: 'islands#show'
+  get 'islands/:id', to: 'islands#show', as: 'island'
+  patch 'islands/:id', to: 'islands#update'
   post 'islands', to: 'islands#create'
   get 'islands/:id/edit', to: 'islands#edit'
-  patch 'islands/:id', to: 'islands#update'
+
   delete 'islands/:id', to: 'islands#destroy'
 
   get 'islands/:island_id/reservations/new', to: 'reservations#new'
@@ -18,4 +19,5 @@ Rails.application.routes.draw do
 
   post 'islands/:island_id/reviews', to: 'reviews#create'
 
+  #resource :islands
 end
