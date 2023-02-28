@@ -1,13 +1,6 @@
-<div class="container">
-  <h1>Hello this is the index</h1>
-
-  <p>Here are all islands</p>
-
+<div class="card">
   <% @islands.each do |island| %>
-    <div class="card">
-      <div class="row">
-          <p><%= island.name %></p>
-          <p><%= island.price %></p>
-        </div>
-      </div>
+    <div class="card-category">
+      <p><%= island.name %></p>
+    </div>
   <% end %>
