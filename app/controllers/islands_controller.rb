@@ -1,5 +1,5 @@
 class IslandsController < ApplicationController
-before_action :set_island, only: [:show]
+before_action :set_island, only: [:show, :edit]
 
   def index
     @islands = Island.all
