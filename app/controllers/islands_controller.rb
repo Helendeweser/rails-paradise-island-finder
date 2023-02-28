@@ -23,17 +23,17 @@ before_action :set_island, only: [:show]
   end
 
   def edit
-
+    @island
   end
 
   def update
-
+    @island.update(island_params)
+    redirect_to islands_path
   end
 
   def destroy
-    # @island = island.find(params[:id])
-    # @island.destroy
-    # redirect_to islands_path, status: :see_other
+    @island.destroy
+    redirect_to islands_path, status: :see_other
   end
 
   private
