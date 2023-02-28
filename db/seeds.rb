@@ -10,7 +10,6 @@ Island.destroy_all
 
 island = Island.new(
   name: "shutter",
-  location: "England",
   size: 975,
   price: 10_764
 )
@@ -19,7 +18,6 @@ puts "Creating island #{island.id}"
 
 island = Island.new(
   name: "Banana Haven",
-  location: "Bahamas",
   size: 1005,
   price: 16_764
 )
@@ -28,7 +26,7 @@ puts "Creating island #{island.id}"
 
 island = Island.new(
   name: "Sweetfish Retreat",
-  location: "Groenland",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 500,
   price: 4964
 )
@@ -37,7 +35,7 @@ puts "Creating island #{island.id}"
 
 island = Island.new(
   name: "Ilan",
-  location: "Enen",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 3000,
   price: 19_646
 )
@@ -46,7 +44,7 @@ puts "Creating island #{island.id}"
 
 island = Island.new(
   name: "Goat",
-  location: "Japan",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 1930,
   price: 12_646
 )
@@ -55,7 +53,7 @@ puts "Creating island #{island.id}"
 
 island = Island.new(
   name: "Pedro's",
-  location: "Columbia",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 300,
   price: 1046
 )
