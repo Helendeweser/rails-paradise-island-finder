@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get 'islands/:id', to: 'islands#show'
   get 'islands/new', to: 'islands#new'
+  get 'islands/:id', to: 'islands#show'
   post 'islands', to: 'islands#create'
   get 'islands/:id/edit', to: 'islands#edit'
   patch 'islands/:id', to: 'islands#update'
