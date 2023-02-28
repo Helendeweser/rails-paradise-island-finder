@@ -10,7 +10,6 @@ require "open-uri"
 
 Island.destroy_all
 
-
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592969/atlantis-boble_f9qfzt.jpg")
 
 island = Island.new(
