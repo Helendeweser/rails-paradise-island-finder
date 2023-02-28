@@ -11,8 +11,48 @@
   </head>
 
   <body>
+
+    <nav class="navbar sticky-top">
+
+      <div class="d-flex left-button">
+        <button class="btn" type="button"><i class="fa-solid fa-umbrella-beach"></i></button>
+        <div class="container h-100">
+          <div class="h-100">
+            <div class="searchbar">
+              <input class="search_input" type="text" name="" placeholder="Enter your paradisiac destination here !">
+              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="main-title">Paradise Island Finder</h1>
+
+      <div class="nav-item dropdown">
+        <div class="avatar dropdown-toggle btn" id="navbarDropdown" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Log In</a>
+            <a class="dropdown-item" href="#">Sign In</a>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-copyright">
+        PIF Paradise Island Finder
+      </div>
+    </div>
+
   </body>
 </html>
