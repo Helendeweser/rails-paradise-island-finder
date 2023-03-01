@@ -10,6 +10,34 @@
   color: white;
   height: 60px;
   width: 60px;
+  text-decoration: none;
+}
+
+.umbrella-logo {
+  background-color: #353b48;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  height: 60px;
+  width: 60px;
+  text-decoration: none;
+}
+
+.umbrella-logo:hover {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.logout-logo:hover {
+  width: 50px;
+  transition: 0.4s;
 }
 
 #main-title {
@@ -26,6 +54,7 @@
   background-color: #353b48;
   border-radius: 30px;
   padding: 10px;
+  display: none;
 }
 
   .search_input{
@@ -62,3 +91,17 @@
   color:white;
   text-decoration:none;
   }
+
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
