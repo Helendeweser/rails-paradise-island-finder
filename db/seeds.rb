@@ -16,7 +16,8 @@ island = Island.new(
   name: "shutter",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 975,
-  price: 10_764
+  price: 10_764,
+  user_id: 1
 )
 island.photo.attach(io: image, filename: "atlantis", content_type: "image/png")
 island.save
@@ -30,7 +31,8 @@ island = Island.new(
   name: "Banana Haven",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 1005,
-  price: 16_764
+  price: 16_764,
+  user_id: 1
 )
 island.photo.attach(io: image, filename: "volcan", content_type: "image/png")
 island.save
@@ -44,7 +46,8 @@ island = Island.new(
   name: "Sweetfish Retreat",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 500,
-  price: 4964
+  price: 4964,
+  user_id: 1
 )
 island.save
 island.photo.attach(io: image, filename: "bahamas", content_type: "image/png")
@@ -58,7 +61,8 @@ island = Island.new(
   name: "Ilan",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 3000,
-  price: 19_646
+  price: 19_646,
+  user_id: 1
 )
 island.save
 island.photo.attach(io: image, filename: "barond island", content_type: "image/png")
@@ -72,7 +76,8 @@ island = Island.new(
   name: "Goat",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 1930,
-  price: 12_646
+  price: 12_646,
+  user_id: 1
 )
 island.save
 island.photo.attach(io: image, filename: "maldives", content_type: "image/png")
@@ -87,7 +92,8 @@ island = Island.new(
   name: "Pedro's",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   size: 300,
-  price: 1046
+  price: 1046,
+  user_id: 1
 )
 island.save
 island.photo.attach(io: image, filename: "small island", content_type: "image/png")

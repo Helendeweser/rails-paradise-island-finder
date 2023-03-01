@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   patch 'islands/:id', to: 'islands#update'
   post 'islands', to: 'islands#create'
-  get 'islands/:id/edit', to: 'islands#edit'
+  get 'islands/:id/edit', to: 'islands#edit', as: 'edit_island'
 
   delete 'islands/:id', to: 'islands#destroy'
 

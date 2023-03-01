@@ -1,6 +1,6 @@
 class IslandsController < ApplicationController
-before_action :set_island, only: [:show, :edit]
-skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_island, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @islands = Island.all
@@ -12,6 +12,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def create
     @island = Island.new(island_params)
+    @island.user = current_user
     if @island.save
       redirect_to island_path(@island)
     else
@@ -29,12 +30,12 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def update
     @island.update(island_params)
-    redirect_to islands_path
+    redirect_to island_path(params[:id])
   end
 
   def destroy
     @island.destroy
-    redirect_to islands_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
