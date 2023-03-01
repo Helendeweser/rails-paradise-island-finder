@@ -1,37 +1,39 @@
-<div class="container">
-  <h1>Here are more details on the island</h1>
+<div class="container show-container">
+  <div class="container upper-part d-flex">
+    <h1>Here are more details on the island</h1>
 
-  <p><a class="btn btn-success" href="#">Book now</a></p>
-</div>
+    <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "Are you sure you want to book?"} %></p>
+  </div>
 
-<div class="comments_cards">
+  <div class="comments_cards">
 
-</div>
+  </div>
 
-<div class="container">
-  <div class="island-card">
-      <%= cl_image_tag @island.photo.key %>
-    <div class="card-trip">
-      <div class="card-trip-infos">
-        <div>
-          <h2 style="line-height:3.5em;"><strong><%= @island.name %></strong></h2>
-          <p><%= @island.description %></p>
+  <div class="container">
+    <div class="island-card">
+        <%= cl_image_tag @island.photo.key %>
+      <div class="card-trip">
+        <div class="card-trip-infos">
           <div>
-            <p style="line-height:3.5em;">Caracteristics :</p>
-              <p><ul>
-                <li>Name: Zama Caye</li>
-                <li>Region: Belize , Central America</li>
-                <li>Location: 15 minutes boat ride from Placencia Village point</li>
-                <li>Type: Private Island</li>
-                <li>Size: <%= @island.size %> Acres</li>
-                <li>Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
-            </ul></p>
+            <h2 style="line-height:3.5em;"><strong><%= @island.name %></strong></h2>
+            <p><%= @island.description %></p>
+            <div>
+              <p style="line-height:3.5em;">Caracteristics :</p>
+                <p><ul>
+                  <li>Name: Zama Caye</li>
+                  <li>Region: Belize , Central America</li>
+                  <li>Location: 15 minutes boat ride from Placencia Village point</li>
+                  <li>Type: Private Island</li>
+                  <li>Size: <%= @island.size %> Acres</li>
+                  <li>Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
+              </ul></p>
+            </div>
           </div>
+          <div class="card-trip-pricing">Price: <%= @island.price %>€/night</div>
         </div>
-        <div class="card-trip-pricing">Price: <%= @island.price %>€/night</div>
       </div>
     </div>
+    <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
+    <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-primary" %></p>
   </div>
-  <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
-  <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %></p>
 </div>
