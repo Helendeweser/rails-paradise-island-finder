@@ -2,8 +2,13 @@
 
 <div class="card">
   <% @islands.each do |island| %>
+    <%= link_to island_path(island) do %>
     <div class="card-category" style="background-image: url('<%= cl_image_path island.photo.key , width: 400, height: 300, crop: :fill %>')">
       <p><%= island.name %></p>
     </div>
+    <% end %>
   <% end %>
+
 </div>
+
+<p><%= link_to "Add a new island", islands_new_path, class: "btn btn-primary" %></p>
