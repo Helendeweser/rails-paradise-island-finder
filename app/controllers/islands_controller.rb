@@ -4,6 +4,14 @@ class IslandsController < ApplicationController
 
   def index
     @islands = Island.all
+
+    @markers = @islands.geocoded.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        window_html: render_to_string(partial: "window", locals: {island: island})
+      }
+    end
   end
 
   def new
@@ -45,6 +53,6 @@ class IslandsController < ApplicationController
   end
 
   def island_params
-    params.require(:island).permit(:name, :size, :description, :price, :photo)
+    params.require(:island).permit(:name, :size, :description, :price, :photo, :address)
   end
 end
