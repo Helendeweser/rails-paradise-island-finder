@@ -1,8 +1,11 @@
 <div class="container show-container">
   <div class="container upper-part d-flex">
     <h1>Here are more details on the island</h1>
-
-    <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "Are you sure you want to book?"} %></p>
+    <% if user_signed_in? %>
+      <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "Are you sure you want to book?"} %></p>
+      <% else %>
+      <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "ERROR: You cannot book this if you're not signed in!"} %></p>
+    <% end %>
   </div>
 
   <div class="comments_cards">
@@ -34,9 +37,9 @@
       </div>
     </div>
 
-  <% if @island.user == current_user %>
-    <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
-    <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-primary" %></p>
+    <% if @island.user == current_user %>
+      <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
+      <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-primary" %></p>
     <% end %>
   </div>
 </div>
