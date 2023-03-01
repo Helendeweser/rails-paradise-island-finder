@@ -7,7 +7,7 @@ class Island < ApplicationRecord
   has_many :reservations
 
 
-  validates :name, :description, :size, :price, :user_id, presence: true
+  validates :name, :description, :size, :price, :user_id, :address, presence: true
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
