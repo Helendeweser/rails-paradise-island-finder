@@ -7,7 +7,7 @@ class Island < ApplicationRecord
   has_many :reservations, dependent: :destroy
 
   validates :name, :description, :size, :price, :user_id, :address, :photo, presence: true
-  validates :size, :price, numericality: true
+  validates :size, :price, numericality: true, comparison: { greater_than: 0 }
   validates :name, uniqueness: true
   validates :description, length: { minimum: 20 }
 
