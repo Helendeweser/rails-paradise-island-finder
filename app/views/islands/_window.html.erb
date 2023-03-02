@@ -1,2 +1,11 @@
-<h2><%= island.name %></h2>
-<p><%= island.address %></p>
+<div class="window-container d-flex">
+  <div class="window-basic-info">
+    <h3><%= island.name %></h2>
+    <hr>
+    <p><%= island.address %></p>
+  </div>
+  <div class="window-bottom d-flex">
+    <h3>€<%= island.price %>/night</h3>
+    <p><%= link_to "Read more", island_path(island), class: "btn btn-primary" %></p>
+  </div>
+</div>
