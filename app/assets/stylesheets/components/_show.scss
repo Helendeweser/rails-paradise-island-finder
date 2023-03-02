@@ -16,32 +16,6 @@
     // top: 0;
   }
 
-.btn-flat {
-  flex-direction: column;
-  align-items: center;
-}
-
-.price-button {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #8a8a8a;
-  transition: 0.3s ease;
-  padding: 12px 28px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.price-button:hover {
-  background: #f6f6f7;
-  color: rgb(114, 114, 114);
-  border-color: rgb(137, 136, 136);
-}
-
-.price-button > a {
-  text-decoration: none;
-}
-
 .card-trip {
   overflow: hidden;
   background: white;

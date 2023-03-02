@@ -1,0 +1,45 @@
+.btn-primary {
+  background-color: #353b48;
+  border-color: #353b48;
+  margin: 5px;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.navbar .btn {
+  background-color: #353b48;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  height: 60px;
+  width: 60px;
+  text-decoration: none;
+}
+
+.btn-flat {
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #8a8a8a;
+  transition: 0.3s ease;
+  padding: 12px 28px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button:hover {
+  background: #f6f6f7;
+  color: rgb(114, 114, 114);
+  border-color: rgb(137, 136, 136);
+}
+
+.price-button > a {
+  text-decoration: none;
+}
