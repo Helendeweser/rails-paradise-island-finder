@@ -74,16 +74,29 @@
   flex-direction: column;
   align-items: center;
   color: black;
-  font-size: 15px;
+  font-size: 1em;
+  text-transform: capitalize;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  .location {
+    margin-bottom: 0;
+  }
+
+  .price {
+    margin-top: 5px;
+  }
 }
 
 .card-groupe {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  p {
+    text-align: center;
+    text-transform: capitalize;
+  }
 }
 
 .cards-searchbar {

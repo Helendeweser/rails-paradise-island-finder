@@ -1,13 +1,20 @@
+.mapboxgl-popup {
+  width: fit-content;
+}
+
+.mapboxgl-popup-content {
+  width: fit-content;
+}
+
 .window-container {
   flex-direction: column;
   align-items:center;
   padding: 40 px;
   background-color: lightgray;
-  width: 160px;
+  width: fit-content;
   padding: 10px;
 
   .window-basic-info {
-    max-width: 200px;
     flex-direction: column;
     align-items:center;
     h3 {

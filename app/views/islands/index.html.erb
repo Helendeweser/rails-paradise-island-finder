@@ -11,12 +11,12 @@
         <%= link_to island_path(island) do %>
         <div class="card-groupe">
           <div class="card-category"
-            style="background-image: url('<%= cl_image_path island.photo.key%>')">
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path island.photo.key%>')">
             <p><%= island.name %></p>
           </div>
           <div class="card-info">
-            <p><%= island.address %></p>
-            <p><%= island.price %> €</p>
+            <p class="location"><%= island.address %></p>
+            <p class="price"><%= island.price %> €</p>
           </div>
         </div>
         <% end %>
