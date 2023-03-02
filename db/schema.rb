@@ -49,10 +49,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_111332) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
-    t.bigint "user_id"
     t.index ["user_id"], name: "index_islands_on_user_id"
   end
 
