@@ -1,30 +1,51 @@
+
 .island-card {
   display: flex;
   justify-content: center;
 }
-.container {
+
+.show-container {
+  position: relative;
+
+}
+  .upper-part {
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+  }
+
+#book-btn > a {
+  text-decoration: none;
+}
+
+.card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* .island-picture {
-  display: inline-block;
+.card-trip > img {
+  height: 500px;
+  width: 80%;
+  object-fit: cover;
+  display: flex;
   align-items: center;
   position: center;
-  width: 150px;
-
-} */
-
-/* .price-and-book {
-  display: inline-block;
 }
- */
+
 .card-trip h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
   color: #353b48;
+}
+
+.card-trip p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
 }
 
 .card-trip ul {
