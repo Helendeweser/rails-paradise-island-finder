@@ -1,5 +1,3 @@
-<%# <h1>Hello this is the index</h1> %>
-
 <div class="card">
   <% @islands.each do |island| %>
     <%= link_to island_path(island) do %>
@@ -12,19 +10,16 @@
         <p><%= island.address %></p>
         <p><%= island.price %> €</p>
       </div>
-    </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 <%if user_signed_in? %>
   <p><%= link_to "Add a new island", islands_new_path, class: "btn btn-primary" %></p>
 <% end %>
 
-
-<%# here comes the mapppp %>
-
-<div style="width: 100%; height: 600px;"
+<div class="map" style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
