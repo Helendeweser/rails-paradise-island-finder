@@ -34,7 +34,11 @@ class IslandsController < ApplicationController
   end
 
   def show
-    @island
+    @markers = [{
+      lat: @island.latitude,
+      lng: @island.longitude,
+      window_html: render_to_string(partial: "window", locals: { island: @island })
+    }]
   end
 
   def edit
