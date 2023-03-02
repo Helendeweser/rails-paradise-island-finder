@@ -3,8 +3,8 @@ class Island < ApplicationRecord
 
   belongs_to :user
 
-  has_many :reviews
-  has_many :reservations
+  has_many :reviews, dependent: :destroy
+  has_many :reservations, dependent: :destroy
 
   validates :name, :description, :size, :price, :user_id, :address, :photo, presence: true
   validates :size, :price, numericality: true
