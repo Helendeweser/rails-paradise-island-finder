@@ -25,5 +25,4 @@ class ReservationsController < ApplicationController
   def set_island
     @island = Island.find(params[:island_id])
   end
-
 end

@@ -1,9 +1,17 @@
-<%= simple_form_for [@island, @reservation] do |f| %>
-   <%= f.input :start_date, as: :date, start_year: Date.today.year,
-                                       end_year: Date.today.year + 10,
-                                       order: [:day, :month, :year] %>
-  <%= f.input :end_date, as: :date, start_year: Date.today.year,
-                                    end_year: Date.today.year + 10,
-                                    order: [:day, :month, :year] %>
-  <%= f.button :submit, class: "btn-primary"%>
-<% end %>
+<div class="container" data-controller="display-price" data-display-price-target="startdate">
+
+  <%= simple_form_for [@island, @reservation] do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <div  data-action="click->display-price#calcul">
+      <p class="btn btn-primary">Confirme</p>
+    </div>
+    <div>
+      <p data-display-price-target="price">Price/night: <span id="prices"><%= @island.price%></span>€</p>
+    </div>
+
+    <p data-display-price-target="days">Nights :</p>
+    <p data-display-price-target="confirme">Total price :</p>
+    <%= f.button :submit, class: "btn-primary"%>
+  <% end %>
+</div>

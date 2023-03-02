@@ -1,10 +1,9 @@
 <div class="container show-container">
   <div class="container upper-part d-flex">
     <h1>Here are more details on the island</h1>
-    <% if user_signed_in? %>
-      <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "Are you sure you want to book?"} %></p>
-      <% else %>
-      <p class="btn btn-success" id="book-btn"><%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "ERROR: You cannot book this if you're not signed in!"} %></p>
+
+    <%= link_to new_island_reservation_path(@island) do%>
+      <p class="btn btn-success" id="book-btn">Book</p>
     <% end %>
   </div>
 
