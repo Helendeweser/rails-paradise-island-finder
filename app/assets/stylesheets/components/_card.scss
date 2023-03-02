@@ -83,3 +83,8 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.cards-searchbar {
+  flex-grow: 1;
+  flex-direction: column;
+}
