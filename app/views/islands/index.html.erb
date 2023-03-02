@@ -1,4 +1,11 @@
 <div class="content">
+  <div class="cards-searchbar">
+    <div class="searchbar">
+      <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find an island"%>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>
     <div class="cards">
       <% @islands.each do |island| %>
         <%= link_to island_path(island) do %>
@@ -15,10 +22,11 @@
         <% end %>
       <% end %>
     </div>
+  </div>
 
-    <div class="map"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+  <div class="map"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
