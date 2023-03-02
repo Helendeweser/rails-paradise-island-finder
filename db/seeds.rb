@@ -108,3 +108,49 @@ island = Island.new(
 island.photo.attach(io: image, filename: "small island", content_type: "image/png")
 island.save
 puts "Creating island #{island.id}..."
+
+
+
+image = URI.open("https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1akOHg.img")
+
+island = Island.new(
+  name: "Second Michaël's island",
+  description: "Second Michaël's Island is a breathtaking destination that offers the perfect blend of luxury and natural beauty. The island's stunning beaches, crystal-clear waters, and lush vegetation provide a serene backdrop for relaxation and adventure. Visitors can indulge in a variety of activities, from lounging on the beach to snorkeling, scuba diving, and sailing. The island's luxurious accommodations offer a five-star experience, with world-class amenities and exceptional service. Second Michaël's Island also boasts a rich cultural heritage, with ancient ruins and cultural landmarks that tell the story of its fascinating history. Whether you're seeking a romantic getaway, a family vacation, or a destination wedding, Second Michaël's Island is the perfect destination to create unforgettable memories.",
+  size: 4200,
+  price: 30046,
+  user_id: User.first.id,
+  address: "Atoll de Gnaviyani, Maldives"
+)
+island.photo.attach(io: image, filename: "small island", content_type: "image/png")
+island.save
+puts "Creating island #{island.id}..."
+
+
+image = URI.open("https://cdn.wallpapersafari.com/71/28/1byPcC.jpg")
+
+island = Island.new(
+  name: "The Turquoise Refuge",
+  description: "The Turquoise Refuge is a tranquil and serene island paradise, where visitors can escape the stresses of daily life and immerse themselves in the beauty of nature. The island's crystal-clear waters and stunning turquoise lagoon provide a stunning backdrop for relaxation and reflection, while its pristine beaches and lush vegetation offer endless opportunities for adventure and exploration. Visitors can enjoy a variety of activities on the island, from snorkeling and kayaking to hiking and wildlife observation. The island's secluded accommodations offer a peaceful retreat, with simple yet comfortable amenities that allow visitors to disconnect and recharge. The Turquoise Refuge is the perfect destination for those seeking a serene and rejuvenating escape from the modern world.",
+  size: 2,
+  price: 3046,
+  user_id: User.first.id,
+  address: "Port Mòr, Highland, Scotland"
+)
+island.photo.attach(io: image, filename: "small island", content_type: "image/png")
+island.save
+puts "Creating island #{island.id}..."
+
+
+image = URI.open("https://4.bp.blogspot.com/-8vRT3ILpMpQ/URoF53WpFvI/AAAAAAAAApE/3l0Rjh1dGV4/s1600/Maldives+Island+Top+Resorts.jpg")
+
+island = Island.new(
+  name: "Rivertawa Archipelago",
+  description: "The Rivertawa Archipelago is a collection of idyllic islands nestled in the crystal-clear waters of the Bahamas. Each island in the archipelago offers its own unique charm, from stunning white-sand beaches to lush tropical forests and vibrant coral reefs. Visitors can indulge in a variety of water activities, from snorkeling and diving to fishing and sailing. The archipelago's pristine beaches offer the perfect setting for sunbathing and relaxation, while its vibrant culture and rich history provide a fascinating backdrop for exploration. The Rivertawa Archipelago is the ultimate destination for those seeking an unforgettable island escape, where natural beauty and cultural richness come together in perfect harmony.",
+  size: 8628,
+  price: 26046,
+  user_id: User.first.id,
+  address: "Nassau, New Providence, Bahamas"
+)
+island.photo.attach(io: image, filename: "small island", content_type: "image/png")
+island.save
+puts "Creating island #{island.id}..."

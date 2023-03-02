@@ -1,24 +1,47 @@
-.show-container {
-  position: relative;
-
-  .upper-part {
-    justify-content: space-between;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    position: sticky;
-    top: 0;
-  }
-
-}
-#book-btn > a {
-  text-decoration: none;
-}
 
 .island-card {
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }
+
+.show-container {
+  position: relative;
+
+}
+  .upper-part {
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    // position: sticky;
+    // top: 0;
+  }
+
+.btn-flat {
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #8a8a8a;
+  transition: 0.3s ease;
+  padding: 12px 28px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button:hover {
+  background: #f6f6f7;
+  color: rgb(114, 114, 114);
+  border-color: rgb(137, 136, 136);
+}
+
+.price-button > a {
+  text-decoration: none;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -26,12 +49,13 @@
 }
 
 .card-trip > img {
-  height: 500px;
+  /* height: 500px;
   width: 80%;
   object-fit: cover;
   display: flex;
   align-items: center;
-  position: center;
+  position: center; */
+  border-radius: 10px 0px 0px 10px
 }
 
 .card-trip h2 {
@@ -45,6 +69,7 @@
   font-size: 16px;
   opacity: .7;
   margin: 0;
+  text-align: justify;
 }
 
 .card-trip ul {
@@ -53,21 +78,34 @@
   margin: 0;
 }
 
-.card-trip .card-trip-infos {
-  padding: 16px;
+.card-trip-infos {
+  padding-inline: 105px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  margin: 40px;
 
 }
 
 .card-trip-pricing {
-  background-color: #353b48;
-  padding: 20px;
+  padding: 15px;
+  margin-left: 20px;
   text-align: center;
-  color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: #353b48;
   font-size: 20px;
   font-weight: bold;
+  position: center;
+  text-align: center;
+}
+
+.price-and-book {
+background-color: #f0efef82;
+border-radius: 0px 10px 10px 0px;
+}
+
+#title-price {
+  font-size: 20px;
+  position: center;
+  text-align: center;
 }
