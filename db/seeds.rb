@@ -12,6 +12,7 @@ Island.destroy_all
 User.destroy_all
 
 User.create(email: "paul@email.com", password: "123456")
+puts "Creating user #{User.first.id}..."
 
 image = URI.open("https://res.cloudinary.com/dlyq7dzjx/image/upload/v1677592969/atlantis-boble_f9qfzt.jpg")
 
@@ -25,7 +26,7 @@ island = Island.new(
 )
 island.photo.attach(io: image, filename: "atlantis", content_type: "image/png")
 island.save!
-puts "Creating island #{island.id}"
+puts "Creating island #{island.id}..."
 
 
 
@@ -41,7 +42,7 @@ island = Island.new(
 )
 island.photo.attach(io: image, filename: "volcan", content_type: "image/png")
 island.save
-puts "Creating island #{island.id}"
+puts "Creating island #{island.id}..."
 
 
 
@@ -55,9 +56,9 @@ island = Island.new(
   user_id: User.first.id,
   address: "pilar de mola, spain"
 )
-island.save
 island.photo.attach(io: image, filename: "bahamas", content_type: "image/png")
-puts "Creating island #{island.id}"
+island.save
+puts "Creating island #{island.id}..."
 
 
 
@@ -71,9 +72,9 @@ island = Island.new(
   user_id: User.first.id,
   address: "Ciutadella de Menorca, spain"
 )
-island.save
 island.photo.attach(io: image, filename: "barond island", content_type: "image/png")
-puts "Creating island #{island.id}"
+island.save
+puts "Creating island #{island.id}..."
 
 
 
@@ -87,9 +88,9 @@ island = Island.new(
   user_id: User.first.id,
   address: "corse, france"
 )
-island.save
 island.photo.attach(io: image, filename: "maldives", content_type: "image/png")
-puts "Creating island #{island.id}"
+island.save
+puts "Creating island #{island.id}..."
 
 
 
@@ -104,6 +105,6 @@ island = Island.new(
   user_id: User.first.id,
   address: "sassari, italy"
 )
-island.save
 island.photo.attach(io: image, filename: "small island", content_type: "image/png")
-puts "Creating island #{island.id}"
+island.save
+puts "Creating island #{island.id}..."
