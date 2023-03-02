@@ -2,12 +2,11 @@
 
   <div class="island-card">
 
-    <%= cl_image_tag @island.photo.key, width: 800, style: "border-radius: 10px 0px 0px 10px;" %>
+      <%= cl_image_tag @island.photo.key, width: 800, style: "border-radius: 10px 0px 0px 10px;" %>
 
     <div class="price-and-book">
-      <div class="card-trip-pricing">
-        <p id="title-price">Price:</p>
-        <p><%= @island.price %>€/night</p>
+      <div class="card-trip-pricing"><p id="title-price">Price:</p>
+       <%= @island.price %>€/night</div>
         <hr style="margin: 25px;">
         <div class="container upper-part d-flex btn btn-flat">
           <% if user_signed_in? %>
@@ -16,7 +15,6 @@
             <%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "ERROR: You cannot book this if you're not signed in!"}, class: "btn btn-primary" %></p>
           <% end %>
         </div>
-      </div>
     </div>
   </div>
 
@@ -32,7 +30,7 @@
           <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
           <li><i class="fa-solid fa-ruler"></i>   Size: <%= @island.size %> Acres</li>
           <li><i class="fa-solid fa-umbrella-beach"></i>   Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
-          <li><i class="fa-solid fa-sack-dollar"></i>   Price: <%= @island.price %>€/night</li>
+          <li><i class="fa-solid fa-sack-dollar"></i>   Price: <%= @island.price %>€/night</div></li>
         </ul></p>
       </div>
     </div>
