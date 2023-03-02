@@ -19,37 +19,44 @@
   </div>
 
 
-    <div class="card-trip-infos">
-        <div><h2 style="line-height:3.5em;"><strong><%= @island.name %></strong></h2>
-          <p><%= @island.description %></p>
-            <div>
-              <hr>
-              <p style="line-height:3.5em;"><strong>Caracteristics :</strong></p>
-              <p><ul style="list-style-type: '';">
-                <li><i class="fa-regular fa-map"></i>   Location: <%= @island.address %></li>
-                <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
-                <li><i class="fa-solid fa-ruler"></i>   Size: <%= @island.size %> Acres</li>
-                <li><i class="fa-solid fa-umbrella-beach"></i>   Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
-                <li><i class="fa-solid fa-sack-dollar"></i>   Price: <%= @island.price %>€/night</div></li>
-              </ul></p>
-            </div>
-<hr>
-
-Reviews
-
-<hr>
-
-Maps
-          </div>
+  <div class="card-trip-infos">
+    <div><h2 style="line-height:3.5em;"><strong><%= @island.name %></strong></h2>
+      <p><%= @island.description %></p>
+      <div>
+        <hr>
+        <p style="line-height:3.5em;"><strong>Caracteristics :</strong></p>
+        <p><ul style="list-style-type: '';">
+          <li><i class="fa-regular fa-map"></i>   Location: <%= @island.address %></li>
+          <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
+          <li><i class="fa-solid fa-ruler"></i>   Size: <%= @island.size %> Acres</li>
+          <li><i class="fa-solid fa-umbrella-beach"></i>   Lifestyles: Islands With Beaches, Ocean Island, Turn Key, Income Potential</li>
+          <li><i class="fa-solid fa-sack-dollar"></i>   Price: <%= @island.price %>€/night</div></li>
+        </ul></p>
       </div>
     </div>
+    <div>
+      <hr style="margin-left: 140px;margin-right: 210px;">
+      <div class="map show"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
 
+<%# <hr> %>
+
+<%# Reviews %>
+
+
+<%#
   </div>
 <%#   <% if @island.user = current_user %>
 <%#     <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%><%# </p> %>
   <%#   <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %><%# /p>  %>
 
 
-  <%#   <% end %>
-  </div>
-</div>
+ <%#  <%#   <% end %>
+ <%#  </div>
+</div> %>
