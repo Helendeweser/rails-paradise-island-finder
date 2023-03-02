@@ -1,16 +1,14 @@
-<div class="cards">
-  <div class="card">
-    <% @islands.each do |island| %>
-      <%= link_to island_path(island) do %>
-      <div class="card-groupe">
-        <div class="card-category"
-          style="background-image: url('<%= cl_image_path island.photo.key%>')">
-          <p><%= island.name %></p>
-        </div>
-        <div class="card-info">
-          <p><%= island.address %></p>
-          <p><%= island.price %> €</p>
-        </div>
+<div class="card">
+  <% @islands.each do |island| %>
+    <%= link_to island_path(island) do %>
+    <div class="card-groupe">
+      <div class="card-category"
+        style="background-image: url('<%= cl_image_path island.photo.key%>')">
+        <p><%= island.name.capitalize %></p>
+      </div>
+      <div class="card-info">
+        <p><%= island.address %></p>
+        <p><%= island.price %> €</p>
       </div>
       <% end %>
     <% end %>
