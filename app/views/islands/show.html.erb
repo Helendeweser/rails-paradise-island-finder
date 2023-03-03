@@ -11,7 +11,7 @@
         <hr style="margin: 25px;">
         <div class="container upper-part d-flex btn btn-flat">
           <%# <div class="calendar"> %>
-            <%= render "form_reservation" %>
+            <%= render "islands/form_reservation" %>
           <%# </div> %>
         </div>
     </div>
@@ -23,7 +23,7 @@
       <p><%= @island.description %></p>
       <div>
         <hr>
-        <p style="line-height:3.5em;"><strong>Caracteristics :</strong></p>
+        <p style="line-height:3.5em;"><strong>Characteristics :</strong></p>
         <p><ul style="list-style-type: '';">
           <li><i class="fa-regular fa-map"></i>   Location: <%= @island.address %></li>
           <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
@@ -34,8 +34,8 @@
       </div>
     </div>
     <div>
-      <hr style="margin-left: 140px;margin-right: 210px;">
-      <div class="map show"
+      <hr>
+      <div class="map showpage"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -49,13 +49,10 @@
 <%# Reviews %>
 
 
-<%#
   </div>
-<%#   <% if @island.user = current_user %>
-<%#     <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%><%# </p> %>
-  <%#   <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %><%# /p>  %>
-
-
- <%#  <%#   <% end %>
- <%#  </div>
-</div> %>
+  <% if @island.user = current_user %>
+    <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
+    <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %></p>
+  <% end %>
+ </div>
+</div>

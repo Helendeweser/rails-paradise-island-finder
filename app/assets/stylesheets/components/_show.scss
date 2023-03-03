@@ -2,6 +2,7 @@
 .island-card {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .show-container {
@@ -20,16 +21,18 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .card-trip > img {
-  /* height: 500px;
-  width: 80%;
-  object-fit: cover;
-  display: flex;
+  width: 700px;
+/*   object-fit: cover; */
+/*   display: flex;
   align-items: center;
   position: center; */
-  border-radius: 10px 0px 0px 10px
+  border-radius: 10px 0px 0px 10px;
 }
 
 .card-trip h2 {
@@ -53,13 +56,13 @@
 }
 
 .card-trip-infos {
-  padding-inline: 105px;
+/*   padding-inline: 105px; */
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  margin: 40px;
-
+/*   margin: 40px; */
+  padding: 15px;
 }
 
 .card-trip-pricing {
@@ -79,6 +82,7 @@
 .price-and-book {
 background-color: #f0efef82;
 border-radius: 0px 10px 10px 0px;
+width: -moz-available;
 }
 
 #title-price {
@@ -86,3 +90,8 @@ border-radius: 0px 10px 10px 0px;
   position: center;
   text-align: center;
 }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  }

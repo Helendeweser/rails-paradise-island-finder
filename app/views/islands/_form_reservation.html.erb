@@ -4,14 +4,16 @@
     <%= f.input :start_date, as: :date, html5: true %>
     <%= f.input :end_date, as: :date, html5: true %>
     <div  data-action="click->display-price#calcul">
-      <p class="btn btn-primary">Confirme</p>
+      <p class="btn btn-primary">Confirm</p>
     </div>
     <div>
-      <p data-display-price-target="price">Price/night: <span id="prices"><%= @island.price%></span>€</p>
+    <hr>
+      <p data-display-price-target="price" style="text-align: center;">Price/night: <span id="prices"><%= @island.price%></span>€</p>
     </div>
 
-    <p data-display-price-target="days">Nights :</p>
-    <p data-display-price-target="confirme">Total price :</p>
+    <p data-display-price-target="days" style="text-align: center;">Nights: 0</p>
+    <p data-display-price-target="confirme" style="text-align: center;">Total price: 0</p>
+    <hr>
     <%= f.button :submit, class: "btn-primary"%>
   <% end %>
 </div>
