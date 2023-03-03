@@ -5,9 +5,9 @@
 
       <%= cl_image_tag @island.photo.key, width: 800, style: "border-radius: 10px 0px 0px 10px;" %>
 
-    <div class="price-and-book">
+    <div class="price-and-book" data-controller="display-price" >
       <div class="card-trip-pricing"><p id="title-price">Price:</p>
-       <%= @island.price %>€/night</div>
+        <span id="prices"><%= @island.price%></span>€/night</div>
         <hr style="margin: 25px;">
         <div class="container upper-part d-flex btn btn-flat">
           <%# <div class="calendar"> %>
