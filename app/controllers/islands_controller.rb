@@ -3,7 +3,12 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @islands = Island.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR address ILIKE :query"
+      @islands = Island.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @islands = Island.all
+    end
 
     @markers = @islands.geocoded.map do |island|
       {
@@ -29,7 +34,11 @@ class IslandsController < ApplicationController
   end
 
   def show
-    @island
+    @markers = [{
+      lat: @island.latitude,
+      lng: @island.longitude,
+      window_html: render_to_string(partial: "window", locals: { island: @island })
+    }]
   end
 
   def edit
