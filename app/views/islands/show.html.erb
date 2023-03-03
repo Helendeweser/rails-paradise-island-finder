@@ -3,12 +3,12 @@
 
   <div class="island-card">
 
-      <%= cl_image_tag @island.photo.key, width: 800, style: "border-radius: 10px 0px 0px 10px;" %>
+      <%= cl_image_tag @island.photo.key, style: "border-radius: 10px 0px 0px 10px;", class: "image" %>
 
     <div class="price-and-book">
-      <div class="card-trip-pricing"><p id="title-price">Price:</p>
-       <%= @island.price %>€/night</div>
-        <hr style="margin: 25px;">
+      <div class="card-trip-pricing"><h3 id="title-price">Price:</h3>
+       <h3><%= @island.price %>€/night</h3></div>
+        <hr style="margin: 8px;">
         <div class="container upper-part d-flex btn btn-flat">
           <%# <div class="calendar"> %>
             <%= render "islands/form_reservation" %>
@@ -23,7 +23,7 @@
       <p><%= @island.description %></p>
       <div>
         <hr>
-        <p style="line-height:3.5em;"><strong>Characteristics :</strong></p>
+        <h3 style="line-height:1.5em;"><strong>Characteristics :</strong></h3>
         <p><ul style="list-style-type: '';">
           <li><i class="fa-regular fa-map"></i>   Location: <%= @island.address %></li>
           <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
@@ -41,6 +41,14 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
+    <div class=" edit-delete d-flex flex-direction-column align-items-center">
+    <% if @island.user = current_user %>
+      <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
+      <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-primary" %></p>
+    <% end %>
+    </div>
+  </div>
+  </div>
   </div>
 </div>
 
@@ -49,10 +57,4 @@
 <%# Reviews %>
 
 
-  </div>
-  <% if @island.user = current_user %>
-    <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
-    <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %></p>
-  <% end %>
- </div>
 </div>

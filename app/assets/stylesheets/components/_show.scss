@@ -1,8 +1,9 @@
 
 .island-card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
+
 }
 
 .show-container {
@@ -17,6 +18,10 @@
     // top: 0;
   }
 
+.edit-delete {
+  margin-left: 19px;
+  margin-bottom: 20px;
+}
 .card-trip {
   overflow: hidden;
   background: white;
@@ -26,13 +31,17 @@
   margin-bottom: 30px;
 }
 
-.card-trip > img {
+.card-trip {
+  padding-top: 10px;
+  .image {
   width: 700px;
+  flex-grow: 1;
 /*   object-fit: cover; */
 /*   display: flex;
   align-items: center;
   position: center; */
   border-radius: 10px 0px 0px 10px;
+  }
 }
 
 .card-trip h2 {
@@ -42,15 +51,22 @@
   color: #353b48;
 }
 
+.card-trip h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #353b48;
+}
+
 .card-trip p {
   font-size: 16px;
   margin: 0;
   text-align: justify;
+  opacity: .9;
 }
 
 .card-trip ul {
   font-size: 16px;
-  opacity: .7;
+  opacity: .9;
   margin: 0;
 }
 
@@ -65,7 +81,8 @@
 }
 
 .card-trip-pricing {
-  padding: 15px;
+  padding-top: 40px;
+  padding-bottom: 5px;
   text-align: center;
   color: #353b48;
   font-size: 20px;
@@ -75,7 +92,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .price-and-book {
