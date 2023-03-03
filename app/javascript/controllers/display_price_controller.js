@@ -21,8 +21,8 @@ export default class extends Controller {
     console.log(prices)
 
     if (prices) {
-      this.daysTarget.innerHTML = `Nights : ${days}`
-      this.confirmeTarget.innerHTML = `Total price : ${prices}€`
+      this.daysTarget.innerHTML = `Nights: ${days}`
+      this.confirmeTarget.innerHTML = `Total price: ${prices}€`
     }
   }
 }
