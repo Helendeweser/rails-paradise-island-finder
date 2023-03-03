@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to island_path(@island)
     else
-      render :new, status: :unprocessable_entity
+      render "/islands/show", status: :unprocessable_entity
     end
   end
 
