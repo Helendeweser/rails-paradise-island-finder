@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.island = @island
     if @reservation.save
-      redirect_to island_path(@island)
+      redirect_to island_path(@island), notice: "Your booking is confirmed"
     else
       render "/islands/show", status: :unprocessable_entity
     end
