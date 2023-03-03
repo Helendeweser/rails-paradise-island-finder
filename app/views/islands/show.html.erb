@@ -10,11 +10,9 @@
        <%= @island.price %>€/night</div>
         <hr style="margin: 25px;">
         <div class="container upper-part d-flex btn btn-flat">
-          <% if user_signed_in? %>
-            <%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "Are you sure you want to book?"}, class: "btn btn-primary" %></p>
-            <% else %>
-            <%= link_to "Book", island_path(@island), data: {turbo_method: :post, turbo_confirm: "ERROR: You cannot book this if you're not signed in!"}, class: "btn btn-primary" %></p>
-          <% end %>
+          <%# <div class="calendar"> %>
+            <%= render "form_reservation" %>
+          <%# </div> %>
         </div>
     </div>
   </div>

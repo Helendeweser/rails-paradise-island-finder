@@ -39,6 +39,7 @@ class IslandsController < ApplicationController
       lng: @island.longitude,
       window_html: render_to_string(partial: "window", locals: { island: @island })
     }]
+    @reservation = Reservation.new
   end
 
   def edit
