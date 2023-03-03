@@ -1,22 +1,33 @@
 .navbar {
   background-color: white;
   top: 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .umbrella-logo {
-  background-color: #353b48;
-  padding: 15px;
+  background-color: $blue;
   border-radius: 50px;
-  color: white;
-  height: 60px;
-  width: 60px;
+  color: $gray;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
+  text-align: center;
+  padding-top: 9px;
+  margin-left: 5px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.fa-bars::before {
+  font-size: 20px;
 }
 
 .umbrella-logo:hover {
-  color: black;
+  background-color: $light-green;
+  color: white;
   text-decoration: none;
-  background-color: white;
   transition: 0.4s;
 }
 
@@ -27,6 +38,25 @@
 
 .logout-logo:hover {
   width: 50px;
+  transition: 0.4s;
+}
+
+.dropdown-toggle {
+  background-color: $blue;
+  border-radius: 50px;
+  color: $gray;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 5px;
+}
+
+.dropdown-toggle:hover {
+  background-color: $light-green;
+  color: white;
+  text-decoration: none;
   transition: 0.4s;
 }
 
