@@ -23,7 +23,7 @@
       <p><%= @island.description %></p>
       <div>
         <hr>
-        <p style="line-height:3.5em;"><strong>Caracteristics :</strong></p>
+        <p style="line-height:3.5em;"><strong>Characteristics :</strong></p>
         <p><ul style="list-style-type: '';">
           <li><i class="fa-regular fa-map"></i>   Location: <%= @island.address %></li>
           <li><i class="fa-regular fa-sun"></i>   Type: Private Island</li>
@@ -34,8 +34,8 @@
       </div>
     </div>
     <div>
-      <hr style="margin-left: 140px;margin-right: 210px;">
-      <div class="map show"
+      <hr>
+      <div class="map showpage"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
