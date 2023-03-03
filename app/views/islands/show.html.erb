@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class=" edit-delete d-flex flex-direction-column align-items-center">
-    <% if @island.user = current_user %>
+    <% if @island.user == current_user %>
       <p><%= link_to "Edit", edit_island_path(@island), class: "btn btn-primary"%></p>
       <p><%= link_to "Delete", island_path(@island), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-primary" %></p>
     <% end %>
